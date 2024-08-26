@@ -34,7 +34,6 @@ def list_company_total_inventory_value():
 
 
 try:
-
     USER_SELECTED_OPTION= show_user_options()
 
     df=pd.read_excel("./assets/inventory.xlsx")
@@ -44,8 +43,7 @@ try:
         case 3: list_products_below()
         case 4: list_company_total_inventory_value()
         case _: print("Invalid option")
-    
-    
+        
 except Exception as e:
     if e==FileNotFoundError:
         print("File not found. Please check the path")
